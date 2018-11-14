@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  --margin: 8px;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: 'Lato', 'Roboto', sans-serif
+}
+
+section {
+  margin: calc(2 * var(--margin)) 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: var(--margin) 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.contact {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.contact__job {
+  text-align: right;
+}
+
+.contact__email {
+  text-align: center;
+}
+
+.contact__phone {
+}
+
+.contact,
+.experience,
+.education,
+.languages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.experience h2,
+.education h2,
+.languages h2 {
+  text-align: right;
+}
+
+.education__dates,
+.education__loc,
+.experience__dates,
+.experience__loc {
+  font-size: smaller;
+  text-align: right;
+}
+
+.company,
+.education__loc,
+.experience__loc {
+  vertical-align: bottom;
+}
+
+.education__loc,
+.experience__loc {
+  margin-top: 5px;
+}
+
+.education__detail,
+.experience__detail,
+.languages__detail {
+  grid-column-end: span 2;
+}
+
+.education__detail:not(:last-child),
+.experience__detail:not(:last-child),
+.languages__detail:not(:last-child) {
+  margin-bottom: var(--margin);
+}
+
+ul {
+  font-family: 'Taviraj', serif;
+  font-size: small;
+  list-style-type: square;
+  margin: var(--margin) 0 0 17px;
+  padding: 0;
+}
+
+ul ul {
+  list-style-type: none;
+  padding-left: 17px;
+  margin: 0 0 var(--margin) 0;
+}
+
+.company {
+  font-size: large;
+  font-weight: bold;
+}
+
+@media print {
+  h1 {
+    font-size: 35px;
+  }
+
+  a {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+  }
+}
