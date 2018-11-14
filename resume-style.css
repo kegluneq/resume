@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
   --margin: 8px;
+  --primary-text: rgba(0, 0, 0, 0.87);
+  --secondary-text: rgba(0, 0, 0, 0.54);
 }
 
 body {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: 'Lato', 'Roboto', sans-serif
+  color: var(--primary-text);
+  font-family: 'Lato', sans-serif
 }
 
 section {
@@ -25,7 +27,7 @@ h2 {
 }
 
 .contact {
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--secondary-text);
 }
 
 .contact__job {
@@ -36,12 +38,10 @@ h2 {
   text-align: center;
 }
 
-.contact__phone {
-}
-
 .contact,
 .experience,
 .education,
+.hobbies,
 .languages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -50,6 +50,7 @@ h2 {
 
 .experience h2,
 .education h2,
+.hobbies h2,
 .languages h2 {
   text-align: right;
 }
@@ -75,6 +76,7 @@ h2 {
 
 .education__detail,
 .experience__detail,
+.hobbies__detail,
 .languages__detail {
   grid-column-end: span 2;
 }
@@ -110,12 +112,16 @@ ul ul {
   }
 
   a {
-    color: rgba(0, 0, 0, 0.87);
+    color: var(--primary-text);
     text-decoration: none;
   }
 
   a:visited {
-    color: rgba(0, 0, 0, 0.87);
+    color: var(--primary-text);
     text-decoration: none;
+  }
+
+  .contact__github a {
+    color: var(--secondary-text);
   }
 }
