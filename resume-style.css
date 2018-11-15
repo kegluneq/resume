@@ -46,6 +46,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 20px;
+  page-break-inside: avoid;
 }
 
 .experience h2,
@@ -106,7 +107,15 @@ ul ul {
   font-weight: bold;
 }
 
+.printonly {
+  display: none;
+}
+
 @media print {
+  * {
+    --margin: 6px;
+  }
+
   h1 {
     font-size: 35px;
   }
@@ -123,5 +132,13 @@ ul ul {
 
   .contact__github a {
     color: var(--secondary-text);
+  }
+
+  .printonly {
+    display: inline;
+  }
+
+  .noprint {
+    display: none;
   }
 }
