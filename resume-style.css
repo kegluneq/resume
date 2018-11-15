@@ -15,19 +15,20 @@ section {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   margin: var(--margin) 0;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   margin: 0;
 }
 
 .contact {
   color: var(--secondary-text);
+  font-size: 15px;
 }
 
 .contact__job {
@@ -44,7 +45,7 @@ h2 {
 .hobbies,
 .languages {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-column-gap: 20px;
   page-break-inside: avoid;
 }
@@ -60,6 +61,7 @@ h2 {
 .education__loc,
 .experience__dates,
 .experience__loc {
+  color: var(--secondary-text);
   font-size: smaller;
   text-align: right;
 }
@@ -72,7 +74,12 @@ h2 {
 
 .education__loc,
 .experience__loc {
-  margin-top: 5px;
+  margin-top: 6px;
+}
+
+.education__dates,
+.experience__dates {
+  margin-top: 2px;
 }
 
 .education__detail,
@@ -90,7 +97,7 @@ h2 {
 
 ul {
   font-family: 'Taviraj', serif;
-  font-size: small;
+  font-size: 13px;
   list-style-type: square;
   margin: var(--margin) 0 0 17px;
   padding: 0;
@@ -107,6 +114,10 @@ ul ul {
   font-weight: bold;
 }
 
+.position {
+  font-size: 14px;
+}
+
 .printonly {
   display: none;
 }
@@ -114,10 +125,12 @@ ul ul {
 @media print {
   * {
     --margin: 6px;
+    --primary-text: rgba(0, 0, 0, 1);
+    --secondary-text: rgba(0, 0, 0, 0.87);
   }
 
   h1 {
-    font-size: 35px;
+    font-size: 32px;
   }
 
   a {
@@ -135,7 +148,7 @@ ul ul {
   }
 
   .printonly {
-    display: inline;
+    /*display: inline;*/
   }
 
   .noprint {
