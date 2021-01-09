@@ -1,0 +1,169 @@
+$margin: 8px;
+$primary-text: rgba(0, 0, 0, 0.87);
+$secondary-text: rgba(0, 0, 0, 0.54);
+
+$grid-template-columns: 1fr 2fr 1fr;
+$job-align: right;
+
+body {
+  box-sizing: border-box;
+  color: $primary-text;
+  font-family: "Lato", sans-serif;
+}
+
+section {
+  &.shead {
+    margin-top: 2 * $margin;
+  }
+
+  &:not(.shead) {
+    margin-bottom: 2 * $margin;
+  }
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: $margin 0;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.contact {
+  color: $secondary-text;
+  font-size: 15px;
+
+  &__job {
+    text-align: $job-align;
+  }
+  &__email {
+    text-align: center;
+  }
+}
+
+.contact,
+.experience,
+.education,
+.hobbies,
+.languages,
+.shead {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-column-gap: 20px;
+  page-break-inside: avoid;
+}
+
+.shead h2,
+.experience h2,
+.education h2,
+.hobbies h2,
+.languages h2 {
+  text-align: $job-align;
+}
+
+.education,
+.experience {
+  &__loc,
+  &__dates {
+    color: $secondary-text;
+    font-size: smaller;
+    text-align: right;
+  }
+}
+
+.company,
+.education__loc,
+.experience__loc {
+  vertical-align: bottom;
+}
+
+.education,
+.experience {
+  &__loc {
+    margin-top: 5px;
+  }
+
+  &__dates {
+    margin-top: 1px;
+  }
+}
+
+.education,
+.experience,
+.hobbies,
+.languages {
+  &__detail {
+    grid-column-end: span 2;
+  }
+}
+
+.education,
+.experience,
+.languages {
+  &__detail:not(:last-child) {
+    margin-bottom: $margin;
+  }
+}
+
+ul {
+  font-family: "Taviraj", serif;
+  font-size: 13px;
+  list-style-type: square;
+  margin: $margin 0 0 17px;
+  padding: 0;
+}
+
+ul ul {
+  list-style-type: none;
+  padding-left: 17px;
+  margin: 0 0 $margin 0;
+}
+
+.company {
+  font-size: large;
+  font-weight: bold;
+}
+
+.position {
+  font-size: 14px;
+}
+
+.printonly {
+  display: none;
+}
+
+@media print {
+    $margin: 6px;
+    $primary-text: rgba(0, 0, 0, 1);
+    $secondary-text: rgba(0, 0, 0, 0.87);
+
+  h1 {
+    font-size: 32px;
+  }
+
+  a {
+    color: $primary-text;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $primary-text;
+    text-decoration: none;
+  }
+
+  .contact__github a {
+    color: $secondary-text;
+  }
+
+  .printonly {
+    /*display: inline;*/
+  }
+
+  .noprint {
+    display: none;
+  }
+}
