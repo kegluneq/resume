@@ -137,9 +137,9 @@ ul ul {
 }
 
 @media print {
-    $margin: 6px;
-    $primary-text: rgba(0, 0, 0, 1);
-    $secondary-text: rgba(0, 0, 0, 0.87);
+  $margin: 6px;
+  $primary-text: rgba(0, 0, 0, 1);
+  $secondary-text: rgba(0, 0, 0, 0.87);
 
   h1 {
     font-size: 32px;
