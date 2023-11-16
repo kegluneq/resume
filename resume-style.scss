@@ -40,6 +40,7 @@ h2 {
   &__job {
     text-align: $job-align;
   }
+
   &__email {
     text-align: center;
   }
@@ -67,6 +68,7 @@ h2 {
 
 .education,
 .experience {
+
   &__loc,
   &__dates {
     color: $secondary-text;
@@ -160,7 +162,7 @@ ul ul {
   }
 
   .printonly {
-    /*display: inline;*/
+    display: inline;
   }
 
   .noprint {
